@@ -120,7 +120,6 @@
           url: $get_feature_project_url,
           type:"GET",
           success:function(data) {
-
               $feature_title = data['feature_title'];
               $feature_image = data['feature_image'];
               $feature_url = data['feature_url'];
@@ -141,13 +140,9 @@
           url: $get_banner_project_url,
           type:"GET",
           success:function(data) {
-              console.log(data);
               $banner_title = data['banner_title'];
               $banner_image = data['banner_image'];
               $banner_url = data['banner_url'];
-
-                  console.log($banner_url);
-
               $("#banner_project_link").attr("href", $banner_url);
               $("#banner_project_image").attr("src", $banner_image);
               $("#banner_project_image").attr("title", $banner_title);
