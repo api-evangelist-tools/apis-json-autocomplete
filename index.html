@@ -70,11 +70,13 @@ function processAPIsJSON($apisjsonURL)
             $url = propertyValue['url'];
 
             if($type=='x-openapi-spec')
-            {
+              {
+
               $FullCount = $FullCount + 1;
+              
               if(!$url.indexOf('http') > -1)
                 {
-                $baseSite = $includeRootUrl.replace('apis.json');
+                $baseSite = $includeRootUrl.replace('apis.json','');
                 $pull_url = $baseSite + $url;
                 }
               else
