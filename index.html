@@ -37,13 +37,15 @@ function processAPIsJSON($apisjsonURL)
       $includeName = masterValue['name'];
       $includeRootUrl = masterValue['url'];
 
+      console.log($includeRootUrl);
+
       $FullCount = $FullCount + 1;
 
       var loadIt2 = $.getJSON($includeRootUrl, function(apisJSON) {
 
         $singleName = apisJSON['name'];
 
-        //console.log($singleName);
+        console.log($singleName);
 
         $singleDesc = apisJSON['description'];
         $singleLogo = apisJSON['image'];
