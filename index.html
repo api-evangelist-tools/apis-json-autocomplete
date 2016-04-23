@@ -37,7 +37,7 @@ function processAPIsJSON($apisjsonURL)
       $includeName = masterValue['name'];
       $includeRootUrl = masterValue['url'];
 
-      console.log($includeRootUrl);
+      //console.log($includeRootUrl);
 
       $FullCount = $FullCount + 1;
 
@@ -72,7 +72,8 @@ function processAPIsJSON($apisjsonURL)
             if($type=='x-openapi-spec')
             {
               $FullCount = $FullCount + 1;
-
+              console.log($url);
+              
               var loadIt3 = $.getJSON($url, function($openapispec) {
 
                 $paths = $openapispec['paths'];
