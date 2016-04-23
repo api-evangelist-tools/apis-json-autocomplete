@@ -72,6 +72,7 @@ function processAPIsJSON($apisjsonURL)
             if($type=='x-openapi-spec')
             {
               $FullCount = $FullCount + 1;
+              console.log($url.indexOf('http') > -1);
               console.log($singleURL + ' = ' + $url);
 
               var loadIt3 = $.getJSON($url, function($openapispec) {
